@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "fe6aa5e0-2df7-4170-81dc-81497e30737f",
+		"name": "projeto-supermercado",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29443224"
+	},
+	"item": [
+		{
+			"name": "listarProdutos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/produtos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"produtos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarProdutosById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/produtos/6512f4c76d76150ed166c6b9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"produtos",
+						"6512f4c76d76150ed166c6b9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cadastrarProduto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Feijão\",\r\n  \"precoAtual\": 9.99,\r\n  \"precoPromocao\": 9.99,\r\n  \"tipo\": \"Feijão Preto\",\r\n  \"descricao\": \"Feijão Preto\",\r\n  \"dataValidade\": \"25/12/2023\",\r\n  \"quantidade\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/produtos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"produtos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cadastrarProduto2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Feijão\",\r\n  \"precoAtual\": 9.99,\r\n  \"precoPromocao\": 9.99,\r\n  \"tipo\": \"teste\",\r\n  \"descricao\": \"Feijão Preto\",\r\n  \"dataValidade\": \"25/12/2023\",\r\n  \"quantidade\": 30,\r\n  \"urlImagem\": \"teste\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/produtos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"produtos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizarProduto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Feijão\",\r\n  \"precoAtual\": 7.90,\r\n  \"precoPromocao\": 7.90,\r\n  \"tipo\": \"Feijão Carioca\",\r\n  \"descricao\": \"Feijão Carioca\",\r\n  \"dataValidade\": \"25/12/2023\",\r\n  \"quantidade\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/produtos/64edd65950d073ebe87b652a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"produtos",
+						"64edd65950d073ebe87b652a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizarProduto2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Feijão\",\r\n  \"precoAtual\": 9.99,\r\n  \"precoPromocao\": 9.99,\r\n  \"descricao\": \"Feijão Preto\",\r\n  \"dataValidade\": \"25/12/2023\",\r\n  \"quantidade\": 30,\r\n  \"urlImagem\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/produtos/64edd65950d073ebe87b652a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"produtos",
+						"64edd65950d073ebe87b652a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cadastrarPromocao",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Feijão\",\r\n  \"precoPromocao\": 4.90,\r\n  \"tipo\": \"Feijão Carioca\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/produtos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"produtos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "excluirProduto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/produtos/651b828a3d9404826db2ab7e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"produtos",
+						"651b828a3d9404826db2ab7e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarFuncionarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/funcionarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"funcionarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarFuncionariosById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/funcionarios/64f348b178e2a2db1072aa51",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"funcionarios",
+						"64f348b178e2a2db1072aa51"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cadastrarFuncionarios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Nicole\",\r\n  \"idade\": 20,\r\n  \"matricula\": 98765,\r\n  \"cpf\": \"999.999.999-99\",\r\n  \"endereco\": \"Rua Endereco Teste, 123.\",\r\n  \"telefone\" : \"(99)9.9999-9999\",\r\n  \"senha\": \"98765\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/funcionarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"funcionarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cadastrarFuncionarios-2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"1\",\r\n  \"email\": \"email\",\r\n  \"emailConfirmacao\": \"1\",\r\n  \"senha\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/funcionarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"funcionarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verificarFuncionario",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/funcionarios/verificacao/email@email.com.br",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"funcionarios",
+						"verificacao",
+						"email@email.com.br"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logarFuncionario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"1\",\r\n  \"senha\": \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/funcionarios/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"funcionarios",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizarFuncionario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Ana Alice\",\r\n  \"idade\": 18,\r\n  \"matricula\": 123456,\r\n  \"cpf\": \"999.999.999-99\",\r\n  \"endereco\": \"Rua Endereco Teste, 123.\",\r\n  \"telefone\" : \"(99)9.9999-9999\",\r\n  \"senha\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/funcionarios/64f348b578e2a2db1072aa53",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"funcionarios",
+						"64f348b578e2a2db1072aa53"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "excluirFuncionario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/funcionarios/6519c00d4bf2b3f2cf1a9b25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"funcionarios",
+						"6519c00d4bf2b3f2cf1a9b25"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
